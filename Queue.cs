@@ -32,7 +32,7 @@ namespace StackNQueueDataStructure
 
         //Display
         public void Display()
-        {
+        {           
             Node tempHead = this.head;
             if(head == null)
             {
@@ -41,6 +41,7 @@ namespace StackNQueueDataStructure
             }
             else
             {
+                Console.Write("Elements in Queue : ");
                 while (tempHead != null)
                 {
                     Console.Write(tempHead.data + " ");
@@ -48,6 +49,19 @@ namespace StackNQueueDataStructure
                 }
 
             }
+        }
+
+        //dequeue : remove top element
+        public void Dequeue()
+        {
+            if(head == null)
+                Console.WriteLine("Queue is Empty!!!!");
+            else
+            { 
+                Console.WriteLine("\n{0} is removed", head.data);
+                head = head.next;
+            }
+                
         }
     }
 }

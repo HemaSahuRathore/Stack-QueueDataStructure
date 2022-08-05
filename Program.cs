@@ -1,6 +1,6 @@
 ﻿namespace StackNQueueDataStructure
 { /// <summary>
-  ///UC 3 : Ability to create a Queue of 56->30->70
+  ///UC 4 : Ability to dequeue from the beginning
   /// </summary>
     internal class Program
     {
@@ -16,7 +16,8 @@
                 Console.WriteLine("1.Ability to create a Stack of 56->30->70");
                 Console.WriteLine("2.Ability to peak and pop from the Stack till it is empty 56->30->70");
                 Console.WriteLine("3.Ability to create a Queue of 56->30->70");
-                Console.Write("4.Exit  ");
+                Console.WriteLine("4.Ability to dequeue from the beginning");
+                Console.Write("5.Exit  ");
                 option = Convert.ToInt32(Console.ReadLine());
 
                 switch (option)
@@ -45,12 +46,20 @@
                         queue.Display();
                         Console.WriteLine();
                         break;
-
-
+                    case 4:
+                        Queue queueObj = new Queue();
+                        queueObj.Enqueue(56);
+                        queueObj.Enqueue(30);
+                        queueObj.Enqueue(70);
+                        queueObj.Display();
+                        queueObj.Dequeue();
+                        queueObj.Display();
+                        Console.WriteLine();
+                        break;
 
                 }
-            } while (option != 4);
 
+            } while (option != 5);
 
         }
     }
